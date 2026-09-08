@@ -1,0 +1,6 @@
+outs:
+- md5: e373251d9f82d2976723f5bce5b827e3.dir
+  size: 12205
+  nfiles: 4
+  hash: md5
+  path: iris_v1.csv
