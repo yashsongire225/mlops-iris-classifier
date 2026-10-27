@@ -38,7 +38,7 @@ def preprocess(input_path: str, output_path: str) -> pd.DataFrame:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
         n_missing = df[col].isna().sum()
-
+        # Remove the collection timestamp because it isn't a model feature.
         if n_missing > 0:
             median_val = df[col].median()
             df[col] = df[col].fillna(median_val)

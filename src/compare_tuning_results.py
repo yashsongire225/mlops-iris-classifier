@@ -21,4 +21,3 @@ for run in sorted(runs, key=lambda r: r.data.tags.get("mlflow.runName", "")):
     n_iter = run.data.params.get("total_combinations") or run.data.params.get("n_iter") or "1"
     total_fits = int(n_iter) * 5 if name != "baseline_decision_tree" else 5
     print(f"{name:<28}{cv_score:<15.4f}{test_acc:<15.4f}{total_fits:<12}")
-
